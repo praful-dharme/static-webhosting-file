@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srichaitanya</title>
+    <script type="text/javascript">
+        var isMobile = {
+            Android: function () {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function () {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function () {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function () {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function () {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function () {
+                return (isMobile.Android() || isMobile.BlackBerry()
+                    || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+            }
+        };
+        if (isMobile.iOS()) {
+            //If app is installed,
+            // setTimeout("window.location = 'https://apps.apple.com/in/app/trice-community/id1383696181';", 1000);
+            window.location.href = "https://apps.apple.com/in/app/infinity-meta/id1642533966;";
+        } else if (isMobile.Windows() || isMobile.Android()
+            || isMobile.BlackBerry() || isMobile.Opera()) {
+            // setTimeout("window.location = 'https://play.google.com/store/apps/details?id=com.yinsol.foodpotsnew&hl=en';", 1000);
+            window.location.href = "https://play.google.com/store/apps/details?id=apps.infinitylearn.lms";
+        } else {
+            window.location.href = "https://srichaitanyameta.com/";
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
